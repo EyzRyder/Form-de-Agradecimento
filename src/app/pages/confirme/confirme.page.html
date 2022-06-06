@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" defaultHref="/home">
+      <ion-back-button><label>Back</label></ion-back-button>
+    </ion-button>
+    <ion-title>Back</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <p>Pesamos que voce confirma seus dados</p>
+    <p><label class="title">Nome:</label> {{nome}}</p>
+    <p><label class="title">Curso:</label> {{curso}}</p>
+    <p><label class="title">Rm:</label> {{rm}}</p>
+    <ion-button shape="round" (click)="telafinal()">Confirmar</ion-button>
+    <ion-button shape="round" color="warning" (click)="alertform()">Corrigir</ion-button>
+  </div>
+</ion-content>

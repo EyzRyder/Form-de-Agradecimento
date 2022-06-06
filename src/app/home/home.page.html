@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      DS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">DS</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <form>
+      <ion-item>
+        <ion-label position="floating">Digite seu nome</ion-label>
+        <ion-input [(ngModel)]="nome" name="nome" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Digite seu curso e ano</ion-label>
+        <ion-input [(ngModel)]="curso" name="curso" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="rm" name="inputRm" type="number" placeholder="Seu RM" max='300000' min='1'></ion-input>
+      </ion-item>
+      <ion-button shape="round" (click)="abriTela()">Enviar</ion-button>
+    </form>
+  </div>
+</ion-content>

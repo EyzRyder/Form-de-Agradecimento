@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Cadastro",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
