@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ToastController } from '@ionic/angular';
+import { ToastController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -25,9 +25,22 @@ export class HomePage {
     toast.present();
   }
 
+  async exibirErro() {
+    const toast = await this.toastController.create({
+      message: 'Tem que preencher os dados',
+      duration: 2000,
+      color: 'danger'
+    });
+    toast.present();
+  }
+
   abriTela() {
-    this.exibirToast();
-    this.router.navigateByUrl(`/confirme/${this.nome}/${this.curso}/${this.rm}`);
+    if (this.nome == undefined || this.curso == undefined || this.rm ==undefined) {
+        this.exibirErro();
+    } else {
+      this.exibirToast();
+      this.router.navigateByUrl(`/confirme/${this.nome}/${this.curso}/${this.rm}`);
+    }
   }
 
 }
